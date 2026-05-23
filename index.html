@@ -179,8 +179,8 @@
  The contents of this form are e-mailed to me. -->
 <h2 id="contact">Contact</h2>
 <!-- Form for people to be able to contact me. It asks the web user for their First Name, Last Name, Email, Subject for email, and the contents of the email. 
- The form is emailed to an email I made for this form specifically. -->
-<form action="mailto:graphic.design.form.7@gmail.com" method="post" enctype="application/x-www-form-urlencoded">
+ When the web user presses submit, it opens their email client to a new email that is being sent to me, containing the contents of the form they filled out. -->
+<form action="mailto:graphic.design.form.7@gmail.com" method="post" enctype="application/x-www-form-urlencoded" target="_blank">
   <label for="f_name">First name:</label><br>
   <input type="text" id="f_name" name="f_name" placeholder="First Name Here" required><br>
   <label for="l_name">Last name:</label><br>
@@ -193,8 +193,6 @@
   <input type="text" id="content" name="content" placeholder="Content Here" size="200" required><br>
   <input type="submit" value="Submit">
 </form>
-
-<a href="mailto:graphic.design.form.7@gmail.com"> send an email</a>
 
 </body>
 </html>
