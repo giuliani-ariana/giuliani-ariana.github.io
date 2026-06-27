@@ -3,6 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Ariana Giuliani | Graphic Designer</title>
+<link rel="stylesheet" href="stylesheet.css">
+
+<!-- Installing the font JetBrains Mono (main font) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+<!-- Installing the font Roboto Mono (fallback font) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<!-- Installing the font Poppins (navigation menu font) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 <script>window.addEventListener('message', function(event) { 
 					if( !event.data ) {
 						return;
@@ -121,37 +138,55 @@
 
 <!-- Menu bar, where visitors to the site can select any of the options to be taken to the appropriate section.
  Pressing the skull image directs them back to the main page. -->
-<nav>
-    <a href="index.html"><img src="files/cyan_skull.png" alt="Cyan outline skull website logo" width="72" height="77.77"></a>
-    <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#portfolio">Portfolio</a>
-    <a href="index.html#contact">Contact</a>
+ <nav>
+	<div class="skull_logo">
+    	<a href="index.html">
+			<picture>
+    			<source srcset="files/white_skull.svg" type="image/svg+xml">
+    			<img src="white_skull.png" alt="White outline skull website logo">
+			</picture>
+		</a>
+    </div>
+	<a class="navigation" href="index.html">Home</a>
+    <a class="navigation" href="index.html#about">About</a>
+    <a class="navigation" href="index.html#portfolio">Portfolio</a>
+    <a class="navigation" href="index.html#contact">Contact</a>
 </nav>
 
 <!-- Home section, which contains my name and a tagline describing what I do. -->
-<h1 id="home"><span class="h1">Ariana</span> <span class="h1_blue_outline">Giuliani</span></h1>
-<p><span class="tagline">Graphic Designer | UI & Digital Design</span></p>
-<hr>
+<div class="name">
+	<h1 id="home"><span class="h1">ariana</span> <span class="h1_blue_outline">giuliani</span></h1>
+	<h3>Graphic Designer | UI & Digital Design</h3>
+</div>
+
+<div class="skull_banner">
+	<picture>
+    	<source srcset="files/skull_banner.svg" type="image/svg+xml">
+    	<img src="skull_banner.png" alt="Banner of skull website logo repeated">
+	</picture>
+</div>
 
 <!-- About section, where I share some information about me and my graphic design experience / accomplishments. -->
-<h2 id="about">About</h2>
-<p>I'm a graphic designer with over 10 years of experience in web and interface design, focused on creating work that is both visually compelling and easy to use. I've developed custom themes and skins for applications like Obsidian, Cockatrice, and Spotify, which I share for free through <a href="https://github.com/overratedgalaxi" target="_blank" title="My GitHub page">GitHub</a> so others can use and build on them.
-<br>Currently, I'm studying in an Arts & Science university program with a focus on graphic design courses. My work always prioritizes clarity, functionality, and communication while maintaining a strong sense of aesthetics and atmosphere.</p>
-<hr>
+<div>
+	<h2 id="about">About</h2>
+	<p>I'm a graphic designer with over 10 years of experience in web and interface design, focused on creating work that is both visually compelling and easy to use. I've developed custom themes and skins for applications like Obsidian, Cockatrice, and Spotify, which I share for free through <a class="rising_highlight" href="https://github.com/overratedgalaxi" target="_blank" title="My GitHub page">GitHub</a> so others can use and build on them.
+	<br>Currently, I'm studying an Arts & Science university program with a focus on graphic design courses. My work always prioritizes clarity, functionality, and communication while maintaining a strong sense of aesthetics and atmosphere.</p>
+</div>
 
 <!-- Portfolio section, where I will display old projects.
  When I have chosen and compiled projects to display, I will fill in the project's information. -->
-<h2 id="portfolio">Portfolio</h2>
-<!-- List of my past projects.
-    Clicking on the projects in the list will bring you to an individual page for each project, where I will add more information and pictures about each project. -->
 <div>
-    <ul>
-        <a href="projects/project_1.html" title="Learn more about Project 1"><li>Project 1</li></a>
-        <a href="projects/project_2.html" title="Learn more about Project 2"><li>Project 2</li></a>
-        <a href="projects/project_3.html" title="Learn more about Project 3"><li>Project 3</li></a>
-    </ul>
-	<br>
+	<h2 id="portfolio">Portfolio</h2>
+	<!-- List of my past projects.
+	Clicking on the projects in the list will bring you to an individual page for each project, where I will add more information and pictures about each project. -->
+	<div>
+		<ul>
+			<a href="projects/project_1.html" title="Learn more about Project 1"><li>Project 1</li></a>
+			<a href="projects/project_2.html" title="Learn more about Project 2"><li>Project 2</li></a>
+			<a href="projects/project_3.html" title="Learn more about Project 3"><li>Project 3</li></a>
+		</ul>
+		<br>
+	</div>
 </div>
 
 <!-- A table with the project names and dates in it (to be filled in later). -->
@@ -175,32 +210,34 @@
     </tr>
     </table>
 </div>
-<hr>
 
 <!-- Contact section, with a form where people can contact me about any questions they have.
  The contents of this form are e-mailed to me. -->
-<h2 id="contact">Contact</h2>
-<!-- Form for people to be able to contact me. It asks the web user for their First Name, Last Name, Email, Subject for email, and the contents of the email. 
- When the web user presses submit, it opens their email client to a new email that is being sent to me, containing the contents of the form they filled out. -->
-<form action="mailto:graphic.design.form.7@gmail.com" method="post" enctype="application/x-www-form-urlencoded" target="_blank">
-  <label for="f_name">First Name:</label><br>
-  <input type="text" id="f_name" name="f_name" placeholder="First Name Here" required><br>
-  <label for="l_name">Last Name:</label><br>
-  <input type="text" id="l_name" name="l_name" placeholder="Last Name Here" required><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" placeholder="Email Here" required><br>
-  <label for="subject">Subject:</label><br>
-  <input type="text" id="subject" name="subject" placeholder="Subject Here" required><br>
-  <label for="content">Email Contents:</label><br>
-  <input type="text" id="content" name="content" placeholder="Content Here" size="200" required><br>
-  <input type="submit" value="Submit">
-</form>
-<hr>
+<div>
+	<h2 class="centered" id="contact">Contact</h2>
+	<!-- Form for people to be able to contact me. It asks the web user for their First Name, Last Name, Email, Subject for email, and the contents of the email. 
+	When the web user presses submit, it opens their email client to a new email that is being sent to me, containing the contents of the form they filled out. -->
+	<form action="mailto:graphic.design.form.7@gmail.com" method="post" enctype="application/x-www-form-urlencoded" target="_blank">
+	<label for="f_name">First Name:</label><br>
+	<input type="text" id="f_name" name="f_name" placeholder="First Name Here" required><br>
+	<label for="l_name">Last Name:</label><br>
+	<input type="text" id="l_name" name="l_name" placeholder="Last Name Here" required><br>
+	<label for="email">Email:</label><br>
+	<input type="email" id="email" name="email" placeholder="Email Here" required><br>
+	<label for="subject">Subject:</label><br>
+	<input type="text" id="subject" name="subject" placeholder="Subject Here" required><br>
+	<label for="content">Email Contents:</label><br>
+	<input type="text" id="content" name="content" placeholder="Content Here" required><br>
+	<input type="submit" value="Submit">
+	</form>
+</div>
 
 <!-- Footer, contains the website author name and date this page was last modified. -->
-<small>Website created by Ariana Giuliani</small><br>
-<small>Last modified: 2026-05-24</small><br>
-<small>This page is hosted on GitHub Pages</small>
+<div>
+	<small>Website created by Ariana Giuliani</small><br>
+	<small>Last modified: <span class="italic">2026-05-24</span></small><br>
+	<small>This page is hosted on <a class="rising_highlight" href="https://pages.github.com" target="_blank" title="GitHub Pages Link">GitHub Pages</a></small>
+</div>
 
 </body>
 </html>
