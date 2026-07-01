@@ -1,6 +1,7 @@
 /*================================================================
     VARIABLES 
 ================================================================*/
+
 /* Declaring color variables. This makes it easy to change colors in the future, and also easier to read the code. */
 :root {
   --main-bg-color: #060606;
@@ -16,6 +17,7 @@
 /*================================================================
     BACKGROUND 
 ================================================================*/
+
 body {
 	background-color: var(--main-bg-color);
 }
@@ -53,17 +55,14 @@ h1 {
 /* Heading 2 */
 h2 {
     color: var(--main-text-color);
-    font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
-    font-size: 30px;
-    font-weight: 500;
+    font-family: "Poppins", "Verdana", sans-serif;
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: bold;
     text-align: left;
+    text-transform: uppercase;
 }
 
-.centered {
-    text-align: center;
-}
-
-/* Heading 3 (subtitle for Heading 1) */
+/* Heading 3 (used as a subtitle) */
 h3 {
     color: var(--main-text-color);
     font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
@@ -77,21 +76,11 @@ h3 {
 p {
     color: var(--main-text-color);
     font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: regular;
     line-height: 2rem;
     text-align: left;
 }
-
-/* Subtitle used to be a subclass of <p>, but I thought it made more sense for it to be H3 instead based on the importance of the text. */
-/* .subtitle {
-    color: var(--main-text-color);
-    font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
-    font-size: 3.53vw;
-    font-weight: 100;
-    text-align: center;
-    
-} */
 
 /* Small text (text for footer) */
 small {
@@ -117,7 +106,7 @@ a.rising_highlight {
 
 a.rising_highlight::before {
   content: '';
-  background-color: var(--xx-dark-accent-color);
+  background-color: var(--x-dark-accent-color);
   position: absolute;
   left: 0;
   bottom: 3px;
@@ -143,11 +132,13 @@ a.navigation {
     font-size: 2.1vw;
     font-weight: 650;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 /*================================================================
     IMAGES 
 ================================================================*/
+
 .skull_logo {
     width: 6vw;
     margin-right: 1.5vw;
@@ -186,11 +177,11 @@ a.navigation {
 }
 
 /*================================================================
-    DIVS
+    NAVIGATION
 ================================================================*/
-/* Navigation menu */
 
-nav {
+/* Previous navigation menu (not fixed to screen, doesn't have background */
+/* .navigation {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,7 +189,150 @@ nav {
     margin-top: 2.5vw;
 }
 
-.name {
-    margin-top: 11vw;
+/* Navigation menu */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* This makes it sit on top of all of the content of the page */
+
+    background: #06060688;
+    backdrop-filter: blur(8px);
 }
 
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 2vw 0;
+}
+
+
+/*================================================================
+    HOME
+================================================================*/
+
+.home {
+    margin-top: 19vw;
+}
+
+/*================================================================
+    ABOUT
+================================================================*/
+
+/* .about img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: auto;
+}
+
+.about p {
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: translate(-10%, -0%);
+} */
+
+.about h2 {
+    margin-left: 4vw;
+    margin-bottom: -6vw;
+}
+
+.about-box {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.about-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    position: absolute;
+
+    top: 18%;
+    left: 8%;
+    right: 8%;
+    bottom: 12%;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-text p {
+    margin: 0;
+    font-size: clamp(0.9rem, 2vw, 2rem);
+    line-height: 1.9;
+}
+
+/*================================================================
+    PORTFOLIO
+================================================================*/
+
+.portfolio img {
+    position: relative;
+    display: block;
+    margin-left: 2vw;
+    margin-right: auto;
+    width: 75%;
+    height: auto;
+}
+
+.portfolio h2 {
+    margin-left: 4vw;
+}
+
+/*================================================================
+    CONTACT
+================================================================*/
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact-box {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.contact-background img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.contact-border {
+    position: absolute;
+    inset: 0;
+}
+
+.contact-border img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contact form {
+    position: absolute;
+
+    /* Adjust these until it fits nicely inside the border */
+    top: 12%;
+    left: 12%;
+    right: 12%;
+    bottom: 12%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    z-index: 2;
+}

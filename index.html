@@ -139,46 +139,65 @@
 <!-- Menu bar, where visitors to the site can select any of the options to be taken to the appropriate section.
  Pressing the skull image directs them back to the main page. -->
  <nav>
-	<div class="skull_logo">
-    	<a href="index.html">
-			<picture>
-    			<source srcset="images/skull_white.svg" type="image/svg+xml">
-    			<img src="images/skull_white.png" alt="White outline skull website logo">
-			</picture>
-		</a>
-    </div>
-	<a class="navigation" href="index.html">Home</a>
-    <a class="navigation" href="index.html#about">About</a>
-    <a class="navigation" href="index.html#portfolio">Portfolio</a>
-    <a class="navigation" href="index.html#contact">Contact</a>
+	<div class="navigation">
+		<div class="skull_logo">
+			<a href="index.html">
+				<picture>
+					<source srcset="images/skull-white.svg" type="image/svg+xml">
+					<img src="images/skull-white.png" alt="White outline skull website logo">
+				</picture>
+			</a>
+		</div>
+	
+	
+		<a class="navigation" href="index.html">Home</a>
+		<a class="navigation" href="index.html#about">About</a>
+		<a class="navigation" href="index.html#portfolio">Portfolio</a>
+		<a class="navigation" href="index.html#contact">Contact</a>
+	</div>
 </nav>
 
 <!-- Home section, which contains my name and a tagline describing what I do. -->
-<div class="name">
-	<h1 id="home"><span class="h1">ariana</span> <span class="h1_blue_outline">giuliani</span></h1>
+<section class="home" id="home">
+	<h1><span class="h1">ariana</span> <span class="h1_blue_outline">giuliani</span></h1>
 	<h3>Graphic Designer | UI & Digital Design</h3>
-</div>
+</section>
 
 <div class="skull_banner">
 	<picture>
-    	<source srcset="images/skull_banner.svg" type="image/svg+xml">
-    	<img src="images/skull_banner.png" alt="Banner of skull website logo repeated">
+    	<source srcset="images/skull-banner.svg" type="image/svg+xml">
+    	<img src="images/skull-banner.png" alt="Banner of skull website logo repeated">
 	</picture>
 </div>
 
 <!-- About section, where I share some information about me and my graphic design experience / accomplishments. -->
-<div>
-	<h2 id="about">About</h2>
-	<p>I'm a graphic designer with over 10 years of experience in web and interface design, focused on creating work that is both visually compelling and easy to use. I've developed custom themes and skins for applications like Obsidian, Cockatrice, and Spotify, which I share for free through <a class="rising_highlight" href="https://github.com/overratedgalaxi" target="_blank" title="My GitHub page">GitHub</a> so others can use and build on them.
-	<br>Currently, I'm studying an Arts & Science university program with a focus on graphic design courses. My work always prioritizes clarity, functionality, and communication while maintaining a strong sense of aesthetics and atmosphere.</p>
-</div>
+<section class="about" id="about">
+	<h2>About</h2>
+
+	<div class="about-box">
+		<picture>
+			<source srcset="images/border-about.svg" type="image/svg+xml">
+			<img src="images/border-about.png" alt="Futuristic cyan border">
+		</picture>
+		
+		<div class="about-text">
+			<p>I'm a graphic designer with over 10 years of experience in web and interface design, focused on creating work that is both visually compelling and easy to use. I've developed custom themes and skins for applications like Obsidian, Cockatrice, and Spotify, which I share for free through <a class="rising_highlight" href="https://github.com/overratedgalaxi" target="_blank" title="My GitHub page">GitHub</a> so others can use and build on them.
+			<br><br>Currently, I'm studying an Arts & Science university program with a focus on graphic design courses. My work always prioritizes clarity, functionality, and communication while maintaining a strong sense of aesthetics and atmosphere.</p>
+		</div>
+	</div>
+</section>
 
 <!-- Portfolio section, where I will display old projects.
  When I have chosen and compiled projects to display, I will fill in the project's information. -->
-<div>
-	<h2 id="portfolio">Portfolio</h2>
+<section class="portfolio" id="portfolio">
+	<h2>Portfolio</h2>
 	<!-- List of my past projects.
 	Clicking on the projects in the list will bring you to an individual page for each project, where I will add more information and pictures about each project. -->
+	<picture>
+    	<source srcset="images/underline-portfolio.svg" type="image/svg+xml">
+    	<img src="images/underline-portfolio.png" alt="Cyber-style cyan underline">
+	</picture>
+
 	<div>
 		<ul>
 			<a href="projects/project_1.html" title="Learn more about Project 1"><li>Project 1</li></a>
@@ -187,7 +206,7 @@
 		</ul>
 		<br>
 	</div>
-</div>
+</section>
 
 <!-- A table with the project names and dates in it (to be filled in later). -->
 <div>
@@ -213,31 +232,45 @@
 
 <!-- Contact section, with a form where people can contact me about any questions they have.
  The contents of this form are e-mailed to me. -->
-<div>
-	<h2 class="centered" id="contact">Contact</h2>
+<section class="contact" id="contact">
+	<h2>Contact</h2>
 	<!-- Form for people to be able to contact me. It asks the web user for their First Name, Last Name, Email, Subject for email, and the contents of the email. 
 	When the web user presses submit, it opens their email client to a new email that is being sent to me, containing the contents of the form they filled out. -->
-	<form action="mailto:graphic.design.form.7@gmail.com" method="post" enctype="application/x-www-form-urlencoded" target="_blank">
-	<label for="f_name">First Name:</label><br>
-	<input type="text" id="f_name" name="f_name" placeholder="First Name Here" required><br>
-	<label for="l_name">Last Name:</label><br>
-	<input type="text" id="l_name" name="l_name" placeholder="Last Name Here" required><br>
-	<label for="email">Email:</label><br>
-	<input type="email" id="email" name="email" placeholder="Email Here" required><br>
-	<label for="subject">Subject:</label><br>
-	<input type="text" id="subject" name="subject" placeholder="Subject Here" required><br>
-	<label for="content">Email Contents:</label><br>
-	<input type="text" id="content" name="content" placeholder="Content Here" required><br>
-	<input type="submit" value="Submit">
-	</form>
-</div>
+	
+	<div class="contact-box">
+		<picture class="contact-background">
+			<source srcset="images/background-contact.svg" type="image/svg+xml">
+			<img src="images/background-contact.png" alt="Dark to cyan gradient background">
+		</picture>
+		
+		<picture class="contact-border">
+			<source srcset="images/border-contact.svg" type="image/svg+xml">
+			<img src="images/border-contact.png" alt="Futuristic dark section background">
+		</picture>
+
+		
+		<form action="mailto:graphic.design.form.7@gmail.com" method="post" enctype="application/x-www-form-urlencoded" target="_blank">
+		<label for="f_name">First Name:</label><br>
+		<input type="text" id="f_name" name="f_name" placeholder="First Name Here" required><br>
+		<label for="l_name">Last Name:</label><br>
+		<input type="text" id="l_name" name="l_name" placeholder="Last Name Here" required><br>
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email" placeholder="Email Here" required><br>
+		<label for="subject">Subject:</label><br>
+		<input type="text" id="subject" name="subject" placeholder="Subject Here" required><br>
+		<label for="content">Email Contents:</label><br>
+		<input type="text" id="content" name="content" placeholder="Content Here" required><br>
+		<input type="submit" value="Submit">
+		</form>
+	</div>
+</section>
 
 <!-- Footer, contains the website author name and date this page was last modified. -->
-<div>
+<section class="footer" id="footer">
 	<small>Website created by Ariana Giuliani</small><br>
 	<small>Last modified: <span class="italic">2026-05-24</span></small><br>
 	<small>This page is hosted on <a class="rising_highlight" href="https://pages.github.com" target="_blank" title="GitHub Pages Link">GitHub Pages</a></small>
-</div>
+</section>
 
 </body>
 </html>
