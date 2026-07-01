@@ -151,8 +151,11 @@
 		<div class="skull_logo">
 			<a href="index.html">
 				<picture>
-					<source srcset="images/skull-white.svg" type="image/svg+xml">
+					<source srcset="images/skull-white.svg" class="skull_white" type="image/svg+xml">
 					<img src="images/skull-white.png" alt="White outline skull website logo">
+					<!-- I tried to make a cyan skull that is under the white skull, so that the skull could turn cyan when hovered over; I was unsuccessful. -->
+					<!-- <source srcset="images/skull-cyan.svg" class="skull_cyan" type="image/svg+xml">
+					<img src="images/skull-cyan.png" alt="Cyan outline skull website logo"> -->
 				</picture>
 			</a>
 		</div>
@@ -171,12 +174,13 @@
 	<h3>Graphic Designer | UI & Digital Design</h3>
 </section>
 
-<div class="skull_banner">
+<!-- Banner is not currently in use, website has been simplified -->
+<!-- <div class="skull_banner">
 	<picture>
     	<source srcset="images/skull-banner.svg" type="image/svg+xml">
     	<img src="images/skull-banner.png" alt="Banner of skull website logo repeated">
 	</picture>
-</div>
+</div> -->
 
 <!-- About section, where I share some information about me and my graphic design experience / accomplishments. -->
 <section class="about" id="about">
@@ -206,14 +210,15 @@
     	<img src="images/underline-portfolio.png" alt="Cyber-style cyan underline">
 	</picture>
 
-	<div>
+	<!-- This was previously a list of my past projects. I have now integrated this list and the links into the table. -->
+	<!-- <div>
 		<ul>
 			<a href="projects/project_1.html" title="Learn more about Project 1"><li>Project 1</li></a>
 			<a href="projects/project_2.html" title="Learn more about Project 2"><li>Project 2</li></a>
 			<a href="projects/project_3.html" title="Learn more about Project 3"><li>Project 3</li></a>
 		</ul>
 		<br>
-	</div>
+	</div> -->
 </section>
 
 <!-- A table with the project names and dates in it (to be filled in later). -->
@@ -221,19 +226,19 @@
     <table><caption>Projects and Dates of Completion</caption>
     <tr>
         <th>Project Name</th>
-        <th>Project Date</th>
+        <th>Date</th>
     </tr>
     <tr>
-        <td>Project 1</td>
-        <td>Project 1 Date</td>
+        <td><a class="rising_highlight" href="projects/project_1.html" title="Learn more about Project 1">Project 1</a></td>
+        <td>March 2026</td>
     </tr>
     <tr>
-        <td>Project 2</td>
-        <td>Project 2 Date</td>
+        <td><a class="rising_highlight" href="projects/project_2.html" title="Learn more about Project 2">Project 2</a></td>
+        <td>March 2026</td>
     </tr>
     <tr>
-        <td>Project 3</td>
-        <td>Project 3 Date</td>
+        <td><a class="rising_highlight" href="projects/project_3.html" title="Learn more about Project 3">Project 3</a></td>
+        <td>March 2026</td>
     </tr>
     </table>
 </div>
@@ -245,15 +250,16 @@
 	<!-- Form for people to be able to contact me. It asks the web user for their First Name, Last Name, Email, Subject for email, and the contents of the email. 
 	When the web user presses submit, it opens their email client to a new email that is being sent to me, containing the contents of the form they filled out. -->
 	
-	<div class="contact-box">
+	<!-- CONTACT FORM VERSION 1 (a simplified version was made for version 2) -->
+	<!-- <div class="contact-box">
 		<picture class="contact-background">
 			<source srcset="images/background-contact.svg" type="image/svg+xml">
 			<img src="images/background-contact.png" alt="Dark to cyan gradient background">
 		</picture>
 		
 		<picture class="contact-border">
-			<source srcset="images/border-contact.svg" type="image/svg+xml">
-			<img src="images/border-contact.png" alt="Futuristic dark section background">
+			<source srcset="images/above-background-contact.svg" type="image/svg+xml">
+			<img src="images/above-background-contact.png" alt="Futuristic dark section background">
 		</picture>
 
 		
@@ -270,14 +276,40 @@
 		<input type="text" id="content" name="content" placeholder="Content Here" required><br>
 		<input type="submit" value="Submit">
 		</form>
+	</div> -->
+
+	<!-- CONTACT FORM VERSION 2 (simplified edition of version 1) -->
+	 <div class="contact-box">
+		<picture>
+			<source srcset="images/border-contact.svg" type="image/svg+xml">
+			<img src="images/border-contact.png" alt="Futuristic cyan border">
+		</picture>
+		
+		<div class="contact-text">
+			<form action="mailto:graphic.design.form.7@gmail.com" method="post" enctype="application/x-www-form-urlencoded" target="_blank">
+			<label for="f_name">First Name:</label>
+			<input type="text" id="f_name" name="f_name" placeholder="First Name" required>
+			<label for="l_name">Last Name:</label>
+			<input type="text" id="l_name" name="l_name" placeholder="Last Name" required>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Email" required>
+			<label for="subject">Subject:</label>
+			<!-- <input type="text" id="subject" name="subject" placeholder="Subject Here" required><br>
+			<label for="content">Email Contents:</label><br> -->  <!-- I don't feel like the subject is necessary -->
+			<input type="text" id="content" name="content" placeholder="Message" required>
+			<input type="submit" value="Submit">
+			</form>
+		</div>
 	</div>
 </section>
 
 <!-- Footer, contains the website author name and date this page was last modified. -->
 <section class="footer" id="footer">
-	<small>Website created by Ariana Giuliani</small><br>
-	<small>Last modified: <span class="italic">2026-05-24</span></small><br>
-	<small>This page is hosted on <a class="rising_highlight" href="https://pages.github.com" target="_blank" title="GitHub Pages Link">GitHub Pages</a></small>
+	<div class="footer-box">
+		<small>Website created by Ariana Giuliani</small><br>
+		<small>Last modified: <span class="italic">2026-05-24</span></small><br>
+		<small>This page is hosted on <a class="rising_highlight" href="https://pages.github.com" target="_blank" title="GitHub Pages Link">GitHub Pages</a></small>
+	</div>
 </section>
 
 </body>

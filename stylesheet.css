@@ -56,7 +56,7 @@ h1 {
 h2 {
     color: var(--main-text-color);
     font-family: "Poppins", "Verdana", sans-serif;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(1rem, 5vw, 5rem);
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
@@ -125,44 +125,12 @@ a.rising_highlight:visited {
     color: var(--main-text-color);
 }
 
-/* Link style for navigation links */
-a.navigation {
-    color: var(--main-text-color);
-    font-family: "Poppins", "Verdana", sans-serif;
-    font-size: 2.1vw;
-    font-weight: 650;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
 /*================================================================
-    IMAGES 
+    BANNER
 ================================================================*/
 
-.skull_logo {
-    width: 6vw;
-    margin-right: 1.5vw;
-}
-
-.skull_logo img {
-    width: 100%;
-    height: auto;
-}
-
+/* Banner is not currently in use, website has been simplified */
 /* .skull_banner {
-    margin-top: 11vw;
-    height: 10vw;
-    overflow: hidden;
-    display: flex;
-    justify-content: left;
-}
-
-.skull_banner img {
-    width: 250%;
-    height: 100%;
-} */
-
-.skull_banner {
     margin-top: 11vw;
     height: 10vw;
     overflow: hidden;
@@ -174,20 +142,63 @@ a.navigation {
     width: auto;
     min-width: 250%;
     display: block;
-}
+} */
 
 /*================================================================
     NAVIGATION
 ================================================================*/
 
-/* Previous navigation menu (not fixed to screen, doesn't have background */
-/* .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-    margin-top: 2.5vw;
+/* Link style for navigation links */
+a.navigation {
+    color: var(--main-text-color);
+    font-family: "Poppins", "Verdana", sans-serif;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+    font-weight: 650;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: color 0.6s ease;
 }
+
+a.navigation:hover {
+    color: var(--main-accent-color);
+}
+
+/* Logo of skull that is also a link (top left on website) */
+.skull_logo {
+    width: 4vw;
+    margin-right: 1.5vw;
+    position: relative;
+    display: inline-block;
+}
+
+.skull_logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* I tried to make a cyan skull that is under the white skull, so that the skull could turn cyan when hovered over; I was unsuccessful. */
+/* .skull_white,
+.skull_cyan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease;
+}
+
+.skull_cyan {
+    opacity: 0;
+}
+
+/* hover swap */
+.skull_logo:hover .skull_white {
+    opacity: 0;
+}
+
+.skull_logo:hover .skull_cyan {
+    opacity: 1;
+} */
 
 /* Navigation menu */
 nav {
@@ -206,7 +217,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    padding: 2vw 0;
+    padding: 1vw 0;
 }
 
 
@@ -215,30 +226,15 @@ nav {
 ================================================================*/
 
 .home {
-    margin-top: 19vw;
+    margin-top: 18vw;
 }
 
 /*================================================================
     ABOUT
 ================================================================*/
 
-/* .about img {
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    height: auto;
-}
-
-.about p {
-    position: absolute;
-    top: 90%;
-    left: 20%;
-    transform: translate(-10%, -0%);
-} */
-
 .about h2 {
+    margin-top: 20vw;
     margin-left: 4vw;
     margin-bottom: -6vw;
 }
@@ -269,13 +265,19 @@ nav {
 
 .about-text p {
     margin: 0;
-    font-size: clamp(0.9rem, 2vw, 2rem);
+    font-size: clamp(0.4rem, 2vw, 2rem);
     line-height: 1.9;
 }
 
 /*================================================================
     PORTFOLIO
 ================================================================*/
+
+.portfolio h2 {
+    margin-top: 20vw;
+    margin-left: 4vw;
+    margin-bottom: -8vw;
+}
 
 .portfolio img {
     position: relative;
@@ -286,15 +288,44 @@ nav {
     height: auto;
 }
 
-.portfolio h2 {
-    margin-left: 4vw;
+th {    /* Header row */
+    background-color: var(--main-bg-color);
+    padding: 2vw;
+    border-bottom: 1px solid var(--main-accent-color);
+
+    color: var(--main-text-color);
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
+    /* font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace; */
+    font-family: "Poppins", "Verdana", sans-serif;
+    text-transform: uppercase;
+    line-height: 2.5vw;
+}
+
+table {
+    width: 95%;
+    margin: 15vw auto;
+    border-collapse: collapse;
+
+    color: var(--main-text-color);
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
+    line-height: 8vw;
+}
+
+td {
+    padding-left: 5vw;
+}
+
+table caption {  /* Hides the table caption */
+    display: none;
 }
 
 /*================================================================
     CONTACT
 ================================================================*/
 
-.contact h2 {
+/* Contact Form Version 1, I simplified the concept for version 2 */
+/* .contact h2 {
     text-align: center;
 }
 
@@ -324,7 +355,6 @@ nav {
 .contact form {
     position: absolute;
 
-    /* Adjust these until it fits nicely inside the border */
     top: 12%;
     left: 12%;
     right: 12%;
@@ -335,4 +365,106 @@ nav {
     gap: 1rem;
 
     z-index: 2;
+} */
+
+
+.contact h2 {
+    margin-top: 20vw;
+    margin-left: 4vw;
+    margin-bottom: -6vw;
+}
+
+.contact-box {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.contact-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.contact-text {
+    position: absolute;
+    
+    top: 24%;
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 5vw;
+}
+
+.contact label {
+    /* color: var(--main-text-color);
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    letter-spacing: 0.05em; */  /* From before I removed contact form labels */
+    display: none !important; /* Removes labels from contact form */
+}
+
+.contact input:focus {
+    border-color: var(--main-accent-color);
+    box-shadow: 0 0 1vw rgba(0, 255, 255, 0.4);
+}
+
+.contact input::placeholder {
+    color: var(--darker-accent-color);
+    letter-spacing: 0.05em;
+}
+
+.contact input[type="text"],
+.contact input[type="email"] {
+    background: var(--main-bg-color);
+    border: 1px solid var(--main-accent-color);
+    color: var(--main-text-color);
+
+    padding: 0.8vw 1vw;
+    font-size: clamp(0.3rem, 1.4vw, 2.5rem);
+
+    outline: none;
+    transition: 0.2s ease;
+    font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
+}
+
+.contact input[type="submit"] {
+    margin-top: 1vw;
+
+    background: transparent;
+    border: 1px solid var(--main-accent-color);
+    color: var(--main-accent-color);
+
+    padding: 1vw;
+    font-size: clamp(0.3rem, 1.6vw, 2rem);
+
+    font-family: "Poppins", "Verdana", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.contact input[type="submit"]:hover {
+    background: var(--main-accent-color);
+    color: var(--main-bg-color);
+    box-shadow: 0 0 1vw rgba(0, 255, 255, 0.5);
+}
+
+/*================================================================
+    FOOTER
+================================================================*/
+
+.footer-box {
+    margin-top: 4vw;
 }
