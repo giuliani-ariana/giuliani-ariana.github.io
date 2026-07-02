@@ -168,12 +168,12 @@ a.navigation:hover {
 .skull_logo {
     width: 4vw;
     margin-right: 1.5vw;
-    position: relative;
-    display: inline-block;
+    /* position: relative;
+    display: inline-block; */
 }
 
 .skull_logo img {
-    display: block;
+    /* display: block; */
     width: 100%;
     height: auto;
 }
@@ -192,13 +192,13 @@ a.navigation:hover {
 }
 
 /* hover swap */
-.skull_logo:hover .skull_white {
+/* .skull_logo:hover .skull_white {
     opacity: 0;
 }
 
 .skull_logo:hover .skull_cyan {
     opacity: 1;
-} */
+}  */
 
 /* Navigation menu */
 nav {
@@ -306,7 +306,7 @@ table {
     margin: 15vw auto;
     border-collapse: collapse;
 
-    color: var(--main-text-color);
+    color: var(--main-accent-color);
     font-size: clamp(0.5rem, 2.5vw, 1.5rem);
     font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
     line-height: 8vw;
@@ -316,6 +316,11 @@ td {
     padding-left: 5vw;
 }
 
+/* Makes the text in the 'Date' column white */
+table tr td:nth-child(2) {
+    color: var(--main-text-color);
+}
+ 
 table caption {  /* Hides the table caption */
     display: none;
 }
