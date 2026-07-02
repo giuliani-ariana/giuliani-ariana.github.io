@@ -152,7 +152,7 @@ a.rising_highlight:visited {
 a.navigation {
     color: var(--main-text-color);
     font-family: "Poppins", "Verdana", sans-serif;
-    font-size: clamp(0.5rem, 1.5vw, 2rem);
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
     font-weight: 650;
     text-decoration: none;
     text-transform: uppercase;
@@ -166,7 +166,7 @@ a.navigation:hover {
 
 /* Logo of skull that is also a link (top left on website) */
 .skull_logo {
-    width: 4vw;
+    width: 3.5vw;
     margin-right: 1.5vw;
     /* position: relative;
     display: inline-block; */
