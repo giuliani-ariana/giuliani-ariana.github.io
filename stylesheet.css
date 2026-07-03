@@ -9,7 +9,8 @@
   --main-accent-color: #00ffff;
   --light-accent-color: #c7ffff;
   --dark-accent-color: #00adad;
-  --darker-accent-color: #006161;
+  --darker-accent-color: #017878;
+  --darkest-accent-color: #006161;
   --x-dark-accent-color: #004d4d;
   --xx-dark-accent-color: #003030;
 }
@@ -372,14 +373,15 @@ table caption {  /* Hides the table caption */
     display: none !important; /* Removes labels from contact form */
 }
 
-.contact input:focus {
+.contact input:focus,
+.contact textarea:focus {
     border-color: var(--main-accent-color);
     box-shadow: 0 0 1vw rgba(0, 255, 255, 0.4);
 }
 
 .contact input::placeholder,
 .contact textarea::placeholder {
-    color: var(--darker-accent-color);
+    color: var(--darkest-accent-color);
     letter-spacing: 0.05em;
 }
 
