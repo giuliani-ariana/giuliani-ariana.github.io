@@ -145,7 +145,7 @@ a.rising-highlight-visited:hover::before {
 }
 
 a.rising-highlight-visited:visited {
-    color: var(--darker-accent-color);
+    color: var(--dark-accent-color);
 }
 
 /*================================================================
