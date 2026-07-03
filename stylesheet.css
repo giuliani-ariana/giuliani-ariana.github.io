@@ -19,6 +19,7 @@
     BACKGROUND 
 ================================================================*/
 
+/* Setting background color */
 body {
 	background-color: var(--main-bg-color);
 }
@@ -84,6 +85,7 @@ small {
     font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
 }
 
+/* Italic style (for footer) */
 .italic {
     font-style: italic;
 }
@@ -92,7 +94,7 @@ small {
     LINKS
 ================================================================*/
 
-/* Link style for main links, with rising highlight. */
+/* Link style for main links, cyan with a rising highlight of dark cyan */
 a.rising-highlight {
 	color: var(--main-accent-color);
     text-decoration: none;
@@ -112,7 +114,6 @@ a.rising-highlight::before {
   transition: all .3s ease-in-out;
 }
 
-/* Link style that is cyan with a rising highlight of dark cyan */
 a.rising-highlight:hover::before {
   bottom: 0;
   height: 100%;
@@ -138,7 +139,6 @@ a.rising-highlight-visited::before {
   transition: all .3s ease-in-out;
 }
 
-/* Link style that is cyan with a rising highlight of dark cyan */
 a.rising-highlight-visited:hover::before {
   bottom: 0;
   height: 100%;
@@ -207,6 +207,7 @@ nav {
     HOME
 ================================================================*/
 
+/* Adding a gap between page title and top of page */
 .home {
     margin-top: 12vw;
 }
@@ -215,6 +216,7 @@ nav {
     ABOUT
 ================================================================*/
 
+/* Positioning the heading and image that acts as a border */
 .about h2 {
     margin-top: 25vw;
     margin-left: 4vw;
@@ -233,6 +235,7 @@ nav {
     height: auto;
 }
 
+/* Positioning the text */
 .about-text {
     position: absolute;
 
@@ -247,19 +250,15 @@ nav {
 
 .about-text p {
     margin: 0;
-    font-size: clamp(0.4rem, 2vw, 2rem);
+    font-size: clamp(0.2rem, 2vw, 2rem);
     line-height: 1.9;
-}
-
-.cyan {
-    color: var(--main-accent-color);
 }
 
 /*================================================================
     PORTFOLIO
 ================================================================*/
 
-/* Heading and underline */
+/* Positioning the heading and image that acts as an underline */
 .portfolio h2 {
     margin-top: 20vw;
     margin-left: 4vw;
@@ -306,7 +305,7 @@ table {
     line-height: 8vw;
 }
 
-td {
+td {    /* Non-header rows */
     padding-left: 5vw;
 }
  
@@ -318,6 +317,7 @@ table caption {  /* Hides the table caption */
     CONTACT
 ================================================================*/
 
+/* Positioning the heading and image that acts as a border */
 .contact h2 {
     margin-top: 20vw;
     margin-left: 4vw;
@@ -336,6 +336,7 @@ table caption {  /* Hides the table caption */
     height: auto;
 }
 
+/* Positioning the contents (the contact form) */
 .contact-text {
     position: absolute;
     
@@ -373,6 +374,7 @@ table caption {  /* Hides the table caption */
     display: none !important; /* Removes labels from contact form */
 }
 
+/* Decoration for the contact form */
 .contact input:focus,
 .contact textarea:focus {
     border-color: var(--main-accent-color);
@@ -428,6 +430,7 @@ table caption {  /* Hides the table caption */
     FOOTER
 ================================================================*/
 
+/* Adding a gap between Contact and Footer */
 .footer-box {
     margin-top: 4vw;
 }
@@ -435,8 +438,8 @@ table caption {  /* Hides the table caption */
 /*================================================================
     PROJECTS
 ================================================================*/
-/* This is the CSS used for each of the 'Project' pages */
 
+/* This is the CSS used for each of the 'Project' pages */
 .project-title {
     text-transform: uppercase;
     margin-top: 12vw;
