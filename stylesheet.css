@@ -35,21 +35,16 @@ h1 {
     text-align: center;
 }
 
-.h1_blue_outline {
+.h1-blue-outline {
     color: var(--main-bg-color);
     text-shadow:
         -1px -1px 0 var(--main-accent-color),
         1px -1px 0 var(--main-accent-color),
         -1px  1px 0 var(--main-accent-color),
         1px  1px 0 var(--main-accent-color);
-    font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
     font-size: 9vw;
     font-weight: bold;
     text-align: center;
-
-    /* Previous way I did the outline. It did allow transparency for the letters, but the outline looked worse. */
-    /* -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px var(--main-accent-color); */
 }
 
 /* Heading 2 */
@@ -97,14 +92,14 @@ small {
 ================================================================*/
 
 /* Link style for main links, with rising highlight. */
-a.rising_highlight {
+a.rising-highlight {
 	color: var(--main-accent-color);
     text-decoration: none;
 	font-weight: 700;
     position: relative;
 }
 
-a.rising_highlight::before {
+a.rising-highlight::before {
   content: '';
   background-color: var(--x-dark-accent-color);
   position: absolute;
@@ -116,33 +111,41 @@ a.rising_highlight::before {
   transition: all .3s ease-in-out;
 }
 
-a.rising_highlight:hover::before {
+/* Link style that is cyan with a rising highlight of dark cyan */
+a.rising-highlight:hover::before {
   bottom: 0;
   height: 100%;
 }
 
-a.rising_highlight:visited {
-    color: var(--main-text-color);
-}
-
-/*================================================================
-    BANNER
-================================================================*/
-
-/* Banner is not currently in use, website has been simplified */
-/* .skull_banner {
-    margin-top: 11vw;
-    height: 10vw;
-    overflow: hidden;
+/* Link style for project links, same as rising highlight but the links are darker once visited (to make it easier to see which projects someone has already seen) */
+a.rising-highlight-visited {
+	color: var(--main-accent-color);
+    text-decoration: none;
+	font-weight: 700;
     position: relative;
 }
 
-.skull_banner img {
-    height: 100%;
-    width: auto;
-    min-width: 250%;
-    display: block;
-} */
+a.rising-highlight-visited::before {
+  content: '';
+  background-color: var(--x-dark-accent-color);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+/* Link style that is cyan with a rising highlight of dark cyan */
+a.rising-highlight-visited:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+a.rising-highlight-visited:visited {
+    color: var(--darker-accent-color);
+}
 
 /*================================================================
     NAVIGATION
@@ -165,40 +168,18 @@ a.navigation:hover {
 }
 
 /* Logo of skull that is also a link (top left on website) */
-.skull_logo {
+.skull-logo {
     width: 3.5vw;
     margin-right: 1.5vw;
     /* position: relative;
     display: inline-block; */
 }
 
-.skull_logo img {
+.skull-logo img {
     /* display: block; */
     width: 100%;
     height: auto;
 }
-
-/* I tried to make a cyan skull that is under the white skull, so that the skull could turn cyan when hovered over; I was unsuccessful. */
-/* .skull_white,
-.skull_cyan {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.2s ease;
-}
-
-.skull_cyan {
-    opacity: 0;
-}
-
-/* hover swap */
-/* .skull_logo:hover .skull_white {
-    opacity: 0;
-}
-
-.skull_logo:hover .skull_cyan {
-    opacity: 1;
-}  */
 
 /* Navigation menu */
 nav {
@@ -277,6 +258,7 @@ nav {
     PORTFOLIO
 ================================================================*/
 
+/* Heading and underline */
 .portfolio h2 {
     margin-top: 20vw;
     margin-left: 4vw;
@@ -292,14 +274,21 @@ nav {
     height: auto;
 }
 
+/* List of projects with links */
+.project-list {
+    font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    line-height: 2.5;
+}
+
+/* Table of projects with project dates */
 th {    /* Header row */
     background-color: var(--main-bg-color);
     padding: 2vw;
     border-bottom: 1px solid var(--main-accent-color);
 
     color: var(--main-text-color);
-    font-size: clamp(0.5rem, 3vw, 1.5rem);
-    /* font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace; */
+    
     font-family: "Poppins", "Verdana", sans-serif;
     text-transform: uppercase;
     line-height: 2.5vw;
@@ -307,10 +296,10 @@ th {    /* Header row */
 
 table {
     width: 95%;
-    margin: 15vw auto;
+    margin: 3vw auto;
     border-collapse: collapse;
 
-    color: var(--main-accent-color);
+    color: var(--main-text-color);
     font-size: clamp(0.5rem, 2.5vw, 1.5rem);
     font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
     line-height: 8vw;
@@ -318,11 +307,6 @@ table {
 
 td {
     padding-left: 5vw;
-}
-
-/* Makes the text in the 'Date' column white */
-table tr td:nth-child(2) {
-    color: var(--main-text-color);
 }
  
 table caption {  /* Hides the table caption */
@@ -332,50 +316,6 @@ table caption {  /* Hides the table caption */
 /*================================================================
     CONTACT
 ================================================================*/
-
-/* Contact Form Version 1, I simplified the concept for version 2 */
-/* .contact h2 {
-    text-align: center;
-}
-
-.contact-box {
-    position: relative;
-    width: 95%;
-    margin: 0 auto;
-}
-
-.contact-background img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.contact-border {
-    position: absolute;
-    inset: 0;
-}
-
-.contact-border img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.contact form {
-    position: absolute;
-
-    top: 12%;
-    left: 12%;
-    right: 12%;
-    bottom: 12%;
-
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    z-index: 2;
-} */
-
 
 .contact h2 {
     margin-top: 20vw;
@@ -416,9 +356,6 @@ table caption {  /* Hides the table caption */
 }
 
 .contact label {
-    /* color: var(--main-text-color);
-    font-size: clamp(0.7rem, 1vw, 1rem);
-    letter-spacing: 0.05em; */  /* From before I removed contact form labels */
     display: none !important; /* Removes labels from contact form */
 }
 
@@ -476,4 +413,35 @@ table caption {  /* Hides the table caption */
 
 .footer-box {
     margin-top: 4vw;
+}
+
+/*================================================================
+    PROJECTS
+================================================================*/
+/* This is the CSS used for each of the 'Project' pages */
+
+.project-title {
+    text-transform: uppercase;
+    margin-top: 12vw;
+}
+
+.project-subtitle {
+    text-transform: uppercase;
+}
+
+
+.project-text {
+    margin-top: 10vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.project-return-link {
+    margin-top: 6vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.project-footer-box {
+    margin-top: 10vw;
 }
