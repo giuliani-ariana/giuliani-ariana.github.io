@@ -254,6 +254,40 @@ nav {
     line-height: 1.9;
 }
 
+/* For when the screen is too small (like on mobile) */
+@media (max-width: 400px) {
+
+    .about h2 {
+        margin-bottom: 4vw;
+    }
+
+    .about-box img {
+        display: none;
+    }
+
+    .about-box {
+        position: static;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        position: static;
+        display: block;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 0vw;
+        margin-bottom: 0vw;
+    }
+
+    .about-text p {
+        position: static;
+        margin: 0;
+        font-size: clamp(0.6rem, 2vw, 2rem);
+        line-height: 1.6;
+    }
+}
+
 /*================================================================
     PORTFOLIO
 ================================================================*/
@@ -433,6 +467,10 @@ table caption {  /* Hides the table caption */
 /* Adding a gap between Contact and Footer */
 .footer-box {
     margin-top: 4vw;
+}
+
+.footer-box small {
+    font-size: clamp(0.5rem, 2vw, 1rem);
 }
 
 /*================================================================
