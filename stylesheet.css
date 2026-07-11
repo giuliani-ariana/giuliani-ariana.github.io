@@ -255,7 +255,7 @@ nav {
 }
 
 /* For when the screen is too small (like on mobile) */
-@media (max-width: 400px) {
+@media (max-width: 750px) {
 
     .about h2 {
         margin-bottom: 4vw;
