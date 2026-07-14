@@ -493,6 +493,11 @@ table caption {  /* Hides the table caption */
         margin: 0 auto;
     }
 
+    /* Increases gap between items */
+    .contact form, .name-row {
+        gap: 3vw;
+    }
+
     .contact input[type="text"],
     .contact input[type="email"],
     .contact textarea {
