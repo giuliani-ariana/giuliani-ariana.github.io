@@ -430,7 +430,7 @@ table caption {  /* Hides the table caption */
     color: var(--main-text-color);
 
     padding: 0.8vw 1vw;
-    font-size: clamp(0.3rem, 1.2vw, 2rem);
+    font-size: clamp(0.6rem, 1vw, 2rem);
 
     outline: none;
     transition: 0.2s ease;
@@ -445,7 +445,7 @@ table caption {  /* Hides the table caption */
     color: var(--main-accent-color);
 
     padding: 1vw;
-    font-size: clamp(0.3rem, 1.2vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 2rem);
 
     font-family: "Poppins", "Verdana", sans-serif;
     text-transform: uppercase;
