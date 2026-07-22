@@ -212,6 +212,17 @@ nav {
     margin-top: 12vw;
 }
 
+/* Mobile mode based on screen pixel width breakpoint */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 10vw;
+    }
+    
+    h3 {
+        font-size: 3.72vw;
+    }
+}
+
 /*================================================================
     ABOUT
 ================================================================*/
@@ -254,8 +265,8 @@ nav {
     line-height: 1.9;
 }
 
-/* For when the screen is too small (like on mobile) */
-@media (max-width: 750px) {
+/* Mobile mode based on screen pixel width breakpoint */
+@media (max-width: 900px) {
 
     .about h2 {
         margin-bottom: 4vw;
@@ -348,8 +359,8 @@ table caption {  /* Hides the table caption */
     display: none;
 }
 
-/* For when the screen is too small (like on mobile) */
-@media (max-width: 750px) {
+/* Mobile mode based on screen pixel width breakpoint */
+@media (max-width: 900px) {
     .portfolio h2 {
         font-size: clamp(1.6rem, 5vw, 3rem);
     }
@@ -424,12 +435,14 @@ table caption {  /* Hides the table caption */
     box-shadow: 0 0 1vw rgba(0, 255, 255, 0.4);
 }
 
+/* Placeholder text */
 .contact input::placeholder,
 .contact textarea::placeholder {
-    color: var(--darkest-accent-color);
+    color: var(--darker-accent-color);
     letter-spacing: 0.05em;
 }
 
+/* Main text */
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
@@ -445,6 +458,7 @@ table caption {  /* Hides the table caption */
     font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
 }
 
+/* Submit button */
 .contact input[type="submit"] {
     margin-top: 1vw;
 
@@ -470,8 +484,8 @@ table caption {  /* Hides the table caption */
 }
 
 
-/* For when the screen is too small (like on mobile) */
-@media (max-width: 750px) {
+/* Mobile mode based on screen pixel width breakpoint */
+@media (max-width: 900px) {
     .contact h2 {
         margin-bottom: 4vw;
         font-size: clamp(1.6rem, 5vw, 3rem);
@@ -527,7 +541,14 @@ table caption {  /* Hides the table caption */
 }
 
 .footer-box small {
-    font-size: clamp(0.5rem, 2vw, 1rem);
+    font-size: clamp(0.5rem, 1.3vw, 1rem);
+}
+
+/* Mobile mode based on screen pixel width breakpoint */
+@media (max-width: 900px) {
+    .footer-box small {
+        font-size: clamp(0.7rem, 1.3vw, 1rem);
+    }
 }
 
 /*================================================================
